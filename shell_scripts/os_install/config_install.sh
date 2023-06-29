@@ -5,7 +5,7 @@ set -x #echo on
 
 apt update
 
-dpkg-reconfigure locales tzdata keyboard-configuration console-setup 
+dpkg-reconfigure locales tzdata keyboard-configuration console-setup
 
 apt install --yes nano
 apt install --yes vim
