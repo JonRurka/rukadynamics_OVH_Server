@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x #echo on
 
+#systemctl reboot --firmware-setup
+
 #call init.sh first
 #call zfs_ubuntu_setup.sh from ssh
 
