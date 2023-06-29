@@ -3,7 +3,12 @@ set -x #echo on
 
 # bootloader partitions
 sgdisk     -n1:1M:+512M   -t1:EF00 $DISK0
+# For legacy (BIOS) booting:
+sgdisk -a1 -n5:24K:+1000K -t5:EF02 $DISK0
+
 sgdisk     -n1:1M:+512M   -t1:EF00 $DISK1
+# For legacy (BIOS) booting:
+sgdisk -a1 -n5:24K:+1000K -t5:EF02 $DISK1
 
 # swap partitions:
 sgdisk     -n2:0:+500M    -t2:FD00 $DISK0
