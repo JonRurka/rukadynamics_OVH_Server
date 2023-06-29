@@ -1,10 +1,10 @@
-
-debootstrap focal /mnt
+# install first:
+#debootstrap focal /mnt
 
 mkdir /mnt/etc/zfs
 cp /etc/zfs/zpool.cache /mnt/etc/zfs/
 
-hostname HOSTNAME
+hostname rukadynamics
 hostname > /mnt/etc/hostname
 
 echo "Set host in /mnt/etc/hosts"
