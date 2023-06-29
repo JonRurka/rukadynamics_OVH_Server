@@ -15,7 +15,7 @@ apt install --yes dosfstools
 mkdosfs -F 32 -s 1 -n EFI ${DISK0}-part1
 mkdosfs -F 32 -s 1 -n EFI ${DISK1}-part1
 mkdir /boot/efi
-echo /dev/disk/by-uuid/$(blkid -s UUID -o value ${DISK}-part1) \
+echo /dev/disk/by-uuid/$(blkid -s UUID -o value ${DISK0}-part1) \
     /boot/efi vfat defaults 0 0 >> /etc/fstab
 mount /boot/efi
 
