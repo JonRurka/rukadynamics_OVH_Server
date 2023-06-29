@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x #echo on
 
 zfs create -o canmount=off -o mountpoint=none rpool/ROOT
 zfs create -o canmount=off -o mountpoint=none bpool/BOOT
