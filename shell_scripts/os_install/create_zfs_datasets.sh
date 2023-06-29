@@ -4,7 +4,7 @@ set -x #echo on
 zfs create -o canmount=off -o mountpoint=none rpool/ROOT
 zfs create -o canmount=off -o mountpoint=none bpool/BOOT
 
-echo "export UUID=$(dd if=/dev/urandom bs=1 count=100 2>/dev/null | tr -dc 'a-z0-9' | cut -c-6)" > /etc/profile.d/java.sh
+export UUID=$(dd if=/dev/urandom bs=1 count=100 2>/dev/null | tr -dc 'a-z0-9' | cut -c-6)
 
 zfs create -o mountpoint=/ \
     -o com.ubuntu.zsys:bootfs=yes \
