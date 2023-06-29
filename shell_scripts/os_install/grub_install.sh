@@ -1,3 +1,5 @@
+#!/bin/bash
+set -x #echo on
 
 # run first: grub-probe /boot
 
