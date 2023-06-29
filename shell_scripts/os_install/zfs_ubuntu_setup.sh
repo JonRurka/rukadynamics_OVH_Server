@@ -6,7 +6,7 @@ set -x #echo on
 #call init.sh first
 #call zfs_ubuntu_setup.sh from ssh
 
-sudo -i
+#sudo -i
 
 source ./set_vars.sh
 source ./init_zfs.sh
