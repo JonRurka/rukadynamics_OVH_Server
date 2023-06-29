@@ -1,3 +1,7 @@
+#!/bin/bash
+set -x #echo on
+
+
 # install first:
 #debootstrap focal /mnt
 
