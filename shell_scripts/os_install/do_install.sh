@@ -65,8 +65,8 @@ addgroup --system lpadmin
 addgroup --system lxd
 addgroup --system sambashare
 
-echo "Set PermitRootLogin in sshd_config"
-vi /etc/ssh/sshd_config
+#echo "Set PermitRootLogin in sshd_config"
+#vi /etc/ssh/sshd_config
 # Set: PermitRootLogin yes
 
 
