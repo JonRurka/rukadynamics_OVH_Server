@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # bootloader partitions
 sgdisk     -n1:1M:+512M   -t1:EF00 $DISK0
 sgdisk     -n1:1M:+512M   -t1:EF00 $DISK1
