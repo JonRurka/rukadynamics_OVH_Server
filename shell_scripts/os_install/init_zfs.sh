@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x #echo on
 
+sudo gsettings set org.gnome.desktop.media-handling automount false
+
 apt install --yes debootstrap gdisk zfsutils-linux
 
 systemctl stop zed
