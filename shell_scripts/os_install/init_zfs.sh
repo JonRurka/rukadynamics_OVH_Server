@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt install --yes debootstrap gdisk zfsutils-linux
 
 systemctl stop zed
