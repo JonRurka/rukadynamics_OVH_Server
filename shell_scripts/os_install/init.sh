@@ -1,3 +1,5 @@
+#!/bin/bash
+
 passwd
 
 sudo apt update
