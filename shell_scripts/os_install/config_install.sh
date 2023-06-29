@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x #echo on
 
-chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
+#chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 
 apt update
 
