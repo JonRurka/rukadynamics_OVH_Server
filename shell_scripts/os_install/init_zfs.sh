@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x #echo on
 
 apt install --yes debootstrap gdisk zfsutils-linux
 
