@@ -11,15 +11,6 @@ apt install --yes nano
 apt install --yes vim
 
 apt install --yes dosfstools
-apt install --yes \
-    grub-efi-amd64 grub-efi-amd64-signed linux-image-generic \
-    shim-signed zfs-initramfs zsys
-
-apt install --yes mdadm
-
-apt install --yes curl patch
-apt install --yes openssh-server
-
 
 mkdosfs -F 32 -s 1 -n EFI ${DISK0}-part1
 mkdosfs -F 32 -s 1 -n EFI ${DISK1}-part1
@@ -28,7 +19,13 @@ echo /dev/disk/by-uuid/$(blkid -s UUID -o value ${DISK}-part1) \
     /boot/efi vfat defaults 0 0 >> /etc/fstab
 mount /boot/efi
 
+apt install --yes \
+    grub-efi-amd64 grub-efi-amd64-signed linux-image-generic \
+    shim-signed zfs-initramfs zsys
+
 passwd
+
+apt install --yes mdadm
 
 # Adjust the level (ZFS raidz = MD raid5, raidz2 = raid6) and
 # raid-devices if necessary and specify the actual devices.
@@ -46,6 +43,8 @@ echo /dev/disk/by-uuid/$(blkid -s UUID -o value /dev/md0) \
 addgroup --system lpadmin
 addgroup --system lxd
 addgroup --system sambashare
+
+apt install --yes openssh-server
 
 #echo "Set PermitRootLogin in sshd_config"
 #vi /etc/ssh/sshd_config
