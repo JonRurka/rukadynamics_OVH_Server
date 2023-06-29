@@ -1,3 +1,4 @@
+#!/bin/bash
 
 zpool create \
     -o cachefile=/etc/zfs/zpool.cache \
