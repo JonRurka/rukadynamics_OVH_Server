@@ -12,5 +12,11 @@ systemctl stop zed
 
 swapoff --all
 
+wipefs -a $DISK0
+wipefs -a $DISK1
+
+blkdiscard -f $DISK0
+blkdiscard -f $DISK1
+
 sgdisk --zap-all $DISK0
 sgdisk --zap-all $DISK1
