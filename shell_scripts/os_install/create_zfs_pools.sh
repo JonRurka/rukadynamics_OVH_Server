@@ -13,7 +13,7 @@ zpool create \
     -O compression=lz4 \
     -O normalization=formD \
     -O relatime=on \
-    -O canmount=off -O mountpoint=/boot -R /mnt \
+    -O canmount=off -O mountpoint=/boot -f -R /mnt \
     bpool mirror \
     ${DISK0}-part3 \
     ${DISK1}-part3
@@ -26,7 +26,7 @@ zpool create \
     -O compression=lz4 \
     -O normalization=formD \
     -O relatime=on \
-    -O canmount=off -O mountpoint=/ -R /mnt \
+    -O canmount=off -O mountpoint=/ -f -R /mnt \
     rpool mirror \
     ${DISK0}-part4 \
     ${DISK1}-part4
