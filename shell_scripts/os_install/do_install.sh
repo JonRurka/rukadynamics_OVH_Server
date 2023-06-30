@@ -3,7 +3,7 @@ set -x #echo on
 
 
 # install first:
-#debootstrap focal /mnt
+debootstrap focal /mnt
 
 mkdir /mnt/etc/zfs
 cp /etc/zfs/zpool.cache /mnt/etc/zfs/
