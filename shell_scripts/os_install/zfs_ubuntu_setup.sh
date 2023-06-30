@@ -2,6 +2,7 @@
 set -x #echo on
 
 #systemctl reboot --firmware-setup
+#sudo systemctl isolate multi-user.target
 
 # download this repo: 
 #git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
