@@ -33,6 +33,8 @@ chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 
 #apt install git
 # download this repo to chroot env: 
+#mkdir /home/tmp_usr/
+#cd /home/tmp_usr/
 #git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
 #cd rukadynamics_OVH_Server/shell_scripts/os_install
 #chmod +x *.sh
