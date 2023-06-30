@@ -4,6 +4,8 @@ set -x #echo on
 #systemctl reboot --firmware-setup
 #sudo systemctl isolate multi-user.target
 
+#sudo ufw allow ssh
+
 # download this repo: 
 #git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
 #cd rukadynamics_OVH_Server/shell_scripts/os_install
