@@ -3,6 +3,8 @@ set -x #echo on
 
 #systemctl reboot --firmware-setup
 
+# download this repo: git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
+
 # clear drive: sfdisk --delete /dev/nvme0n1
 
 #call init.sh first
