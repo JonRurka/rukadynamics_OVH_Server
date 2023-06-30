@@ -34,10 +34,10 @@ apt install --yes \
     shim-signed zfs-initramfs zsys
 sleep 3
 
-passwd
-
 apt purge --yes os-prober
 sleep 3
+
+passwd
 
 apt install --yes mdadm
 sleep 3
