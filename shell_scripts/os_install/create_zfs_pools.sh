@@ -17,17 +17,18 @@ zpool create \
     -o feature@spacemap_histogram=enabled \
     -O acltype=posixacl -O canmount=off -O compression=lz4 \
     -O devices=off -O normalization=formD -O relatime=on -O xattr=sa \
-    -O mountpoint=/boot -R /mnt \
+    -O mountpoint=/boot -R -f /mnt \
     bpool mirror \
     ${DISK0}-part3 \
     ${DISK1}-part3
+sleep 5
 
 zpool create \
     -o ashift=12 -o autotrim=on \
     -O acltype=posixacl -O canmount=off -O compression=lz4 \
     -O dnodesize=auto -O normalization=formD -O relatime=on \
-    -O xattr=sa -O mountpoint=/ -R /mnt -f \
+    -O xattr=sa -O mountpoint=/ -R -f /mnt -f \
     rpool mirror \
     ${DISK0}-part4 \
     ${DISK1}-part4
-    
+sleep 5
