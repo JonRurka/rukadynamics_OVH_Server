@@ -3,7 +3,7 @@ set -x #echo on
 
 
 # install first:
-debootstrap focal /mnt
+debootstrap jammy /mnt
 sleep 3
 
 mkdir /mnt/etc/zfs
