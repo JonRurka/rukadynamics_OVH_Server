@@ -29,6 +29,7 @@ echo "Install script finished"
 
 chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 
+
 # ----- Run in chroot -----
 
 #apt install git
