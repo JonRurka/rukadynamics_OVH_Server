@@ -26,12 +26,7 @@ touch /etc/zfs/zfs-list.cache/rpool
 ln -s /usr/lib/zfs-linux/zed.d/history_event-zfs-list-cacher.sh /etc/zfs/zed.d
 zed -F &
 
-cat /etc/zfs/zfs-list.cache/bpool
-cat /etc/zfs/zfs-list.cache/rpool
 
-# if empty run:
-#zfs set canmount=on bpool/BOOT/ubuntu_$UUID
-#zfs set canmount=on rpool/ROOT/ubuntu_$UUID
 
 
 
