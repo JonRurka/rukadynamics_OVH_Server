@@ -16,9 +16,12 @@ source ./create_zfs_pools.sh
 source ./create_zfs_datasets.sh
 source ./do_install.sh
 
+echo "Install script finished"
+
 chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 
-# Run in chroot
+# ----- Run in chroot -----
+
 #source ./config_install.sh
 
 # verify grub: grub-probe /boot
@@ -33,4 +36,19 @@ chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 #zfs set canmount=on bpool/BOOT/ubuntu_$UUID
 #zfs set canmount=on rpool/ROOT/ubuntu_$UUID
 
-echo "Install script finished"
+#once files have data, run "fg", wait a bit, and ctrl+C
+
+# eliminate /mnt in paths with:
+# sed -Ei "s|/mnt/?|/|" /etc/zfs/zfs-list.cache/*
+
+# exit chroot: exit
+
+--------------
+
+# unmount in host:
+#mount | grep -v zfs | tac | awk '/\/mnt/ {print $3}' | \
+#    xargs -i{} umount -lf {}
+#zpool export -a
+
+# Reboot system
+
