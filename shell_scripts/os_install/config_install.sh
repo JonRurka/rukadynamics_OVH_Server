@@ -25,20 +25,22 @@ apt install --yes \
 
 passwd
 
+apt purge --yes os-prober
+
 apt install --yes mdadm
 
 # Adjust the level (ZFS raidz = MD raid5, raidz2 = raid6) and
 # raid-devices if necessary and specify the actual devices.
 # TODO: specify device
-mdadm --create /dev/md0 --metadata=1.2 --level=mirror \
-    --raid-devices=2 ${DISK1}-part2 ${DISK2}-part2
-mkswap -f /dev/md0
-echo /dev/disk/by-uuid/$(blkid -s UUID -o value /dev/md0) \
-    none swap discard 0 0 >> /etc/fstab
+#mdadm --create /dev/md0 --metadata=1.2 --level=mirror \
+#    --raid-devices=2 ${DISK1}-part2 ${DISK2}-part2
+#mkswap -f /dev/md0
+#echo /dev/disk/by-uuid/$(blkid -s UUID -o value /dev/md0) \
+#    none swap discard 0 0 >> /etc/fstab
 
 
-#cp /usr/share/systemd/tmp.mount /etc/systemd/system/
-#systemctl enable tmp.mount
+cp /usr/share/systemd/tmp.mount /etc/systemd/system/
+systemctl enable tmp.mount
 
 addgroup --system lpadmin
 addgroup --system lxd
@@ -46,8 +48,8 @@ addgroup --system sambashare
 
 apt install --yes openssh-server
 
-#echo "Set PermitRootLogin in sshd_config"
-#vi /etc/ssh/sshd_config
+echo "Set PermitRootLogin in sshd_config"
+vim /etc/ssh/sshd_config
 # Set: PermitRootLogin yes
 
 
