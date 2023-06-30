@@ -8,7 +8,9 @@ set -x #echo on
 #cd rukadynamics_OVH_Server/shell_scripts/os_install
 #chmod +x *.sh
 
-# clear drive: sfdisk --delete /dev/nvme0n1
+# clear drives: 
+#sfdisk --delete /dev/nvme0n1
+#sfdisk --delete /dev/nvme1n1
 
 #call init.sh first
 #call zfs_ubuntu_setup.sh from ssh
