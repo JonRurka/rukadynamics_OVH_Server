@@ -26,6 +26,8 @@ chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 
 # ----- Run in chroot -----
 
+#apt install git
+
 #source ./config_install.sh
 
 # verify grub: grub-probe /boot
