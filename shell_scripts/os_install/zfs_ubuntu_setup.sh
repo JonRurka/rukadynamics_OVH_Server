@@ -3,6 +3,8 @@ set -x #echo on
 
 #systemctl reboot --firmware-setup
 
+# clear drive: sfdisk --delete /dev/nvme0n1
+
 #call init.sh first
 #call zfs_ubuntu_setup.sh from ssh
 
