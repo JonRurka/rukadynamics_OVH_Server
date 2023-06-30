@@ -3,7 +3,10 @@ set -x #echo on
 
 #systemctl reboot --firmware-setup
 
-# download this repo: git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
+# download this repo: 
+#git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
+#cd rukadynamics_OVH_Server/shell_scripts/os_install
+#chmod +x *.sh
 
 # clear drive: sfdisk --delete /dev/nvme0n1
 
@@ -27,7 +30,10 @@ chroot /mnt /usr/bin/env DISK=$DISK0 UUID=$UUID bash --login
 # ----- Run in chroot -----
 
 #apt install git
-# download this repo to chroot env: git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
+# download this repo to chroot env: 
+#git clone https://github.com/JonRurka/rukadynamics_OVH_Server.git
+#cd rukadynamics_OVH_Server/shell_scripts/os_install
+#chmod +x *.sh
 
 #source ./config_install.sh
 
